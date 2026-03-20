@@ -1,0 +1,374 @@
+/* Variables de color */
+:root {
+    --oscuro:  #111;
+    --dorado:  #c9a96e;
+    --claro:   #f5f0e8;
+    --gris:    #555;
+    --borde:   #333;
+}
+
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: var(--oscuro);
+    color: var(--claro);
+    line-height: 1.7;
+}
+
+/* NAVBAR */
+#navbar {
+    position: sticky;
+    top: 0;
+    background: #000;
+    border-bottom: 1px solid var(--borde);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--dorado);
+    letter-spacing: 0.2em;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+#navbar a {
+    color: #aaa;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: color 0.3s;
+}
+
+#navbar a:hover {
+    color: var(--dorado);
+}
+
+/* SECCIONES */
+section {
+    padding: 4rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: var(--dorado);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--dorado);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--borde);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+p { margin-bottom: 1rem; }
+
+/* BOTÓN */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.6rem;
+    background: var(--dorado);
+    color: #000;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    margin: 0.3rem 0.3rem 0 0;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #e0c080;
+}
+
+/* RELOJ CSS */
+.reloj {
+    width: 180px;
+    height: 180px;
+    border: 4px solid var(--dorado);
+    border-radius: 50%;
+    position: relative;
+    margin: 2rem auto;
+    background: #1a1a1a;
+    box-shadow: 0 0 30px rgba(201,169,110,0.3);
+}
+
+.reloj::after {
+    content: 'CHRONOS';
+    position: absolute;
+    top: 38%;
+    width: 100%;
+    text-align: center;
+    font-size: 0.5rem;
+    letter-spacing: 0.2em;
+    color: var(--dorado);
+    opacity: 0.5;
+}
+
+.aguja {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    border-radius: 3px;
+}
+
+.aguja-h {
+    width: 5px;
+    height: 45px;
+    background: var(--dorado);
+    margin-left: -2.5px;
+}
+
+.aguja-m {
+    width: 3px;
+    height: 62px;
+    background: #ddd;
+    margin-left: -1.5px;
+}
+
+.aguja-s {
+    width: 2px;
+    height: 70px;
+    background: red;
+    margin-left: -1px;
+}
+
+.centro {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 10px; height: 10px;
+    background: var(--dorado);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+/* PRODUCTOS / GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.tarjeta {
+    background: #1a1a1a;
+    border: 1px solid var(--borde);
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.tarjeta p {
+    color: #888;
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+}
+
+.tarjeta strong {
+    color: var(--dorado);
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.6rem;
+}
+
+/*  VIDEO  */
+.video-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16/9;
+    margin: 1.5rem 0;
+    border: 1px solid var(--borde);
+}
+
+.video-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+audio {
+    display: block;
+    margin: 1rem 0;
+    accent-color: var(--dorado);
+}
+
+/* TABLA  */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+caption {
+    font-size: 0.8rem;
+    color: #888;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0;
+}
+
+th {
+    background: #222;
+    color: var(--dorado);
+    padding: 0.8rem 1rem;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid var(--borde);
+}
+
+td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--borde);
+    color: #bbb;
+}
+
+.fila-alt { background: #191919; }
+
+.precio {
+    color: var(--dorado);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+tfoot td {
+    font-size: 0.75rem;
+    color: #666;
+    font-style: italic;
+    border-top: 1px solid var(--borde);
+}
+
+/* FORMULARIO  */
+form {
+    max-width: 600px;
+}
+
+label {
+    display: block;
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.7rem;
+    background: #1a1a1a;
+    border: 1px solid var(--borde);
+    color: var(--claro);
+    font-size: 0.95rem;
+    font-family: Georgia, serif;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--dorado);
+}
+
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+    accent-color: var(--dorado);
+}
+
+/* Label del checkbox en línea */
+input[type="checkbox"] + label {
+    display: inline;
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: 0.85rem;
+}
+
+textarea { resize: vertical; }
+
+a { color: var(--dorado); }
+
+#estado {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/*  FOOTER  */
+footer {
+    background: #000;
+    border-top: 1px solid var(--borde);
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+footer a {
+    color: #888;
+    text-decoration: none;
+    margin: 0 0.3rem;
+}
+
+footer a:hover { color: var(--dorado); }
+
+footer p { margin: 0.4rem 0; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; }
+    #navbar ul { gap: 0.8rem; flex-wrap: wrap; }
+    h1 { font-size: 2rem; }
+}

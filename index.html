@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHRONOS | Relojes</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        #navbar a.activo {
+            color: var(--dorado);
+            border-bottom: 1px solid var(--dorado);
+            padding-bottom: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- BARRA DE NAVEGACIÓN -->
+<!-- Los enlaces usan data-seccion para que JS identifique la sección a cargar -->
+<nav id="navbar">
+    <span class="logo" onclick="navegarA('inicio')" style="cursor:pointer;">CHRONOS</span>
+    <ul id="nav-lista">
+        <li><a href="#" data-seccion="inicio"    onclick="navegarA('inicio');    return false;">Inicio</a></li>
+        <li><a href="#" data-seccion="productos" onclick="navegarA('productos'); return false;">Productos</a></li>
+        <li><a href="#" data-seccion="video"     onclick="navegarA('video');     return false;">Video</a></li>
+        <li><a href="#" data-seccion="tarifas"   onclick="navegarA('tarifas');   return false;">Tarifas</a></li>
+        <li><a href="#" data-seccion="contacto"  onclick="navegarA('contacto');  return false;">Contacto</a></li>
+        <li><a href="#" data-seccion="tiendas"   onclick="navegarA('tiendas');   return false;">Tiendas</a></li>
+    </ul>
+</nav>
+
+<!-- CONTENEDOR PRINCIPAL — todo el contenido lo genera main.js -->
+<div id="main-content"></div>
+
+<!-- PIE DE PÁGINA -->
+<footer>
+    <p><strong>CHRONOS</strong> — Relojes de Lujo</p>
+    <p>
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a> |
+        <a href="#">Aviso legal</a> |
+        <a href="#">Política de privacidad</a>
+    </p>
+    <p id="footer-year"></p>
+</footer>
+
+
+<script src="main.js"></script>
+
+</body>
+</html>
