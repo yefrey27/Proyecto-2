@@ -5,7 +5,7 @@ const productos = [
         nombre: 'Aqua Terra',
         descripcion: 'Automático · Acero · 300 m',
         precio: 4800,
-        imagen: 'https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=400&q=80',
+        imagen: 'https://plazavendome.vteximg.com.br/arquivos/ids/165594-1000-1000/omega-reloj-seamaster-aqua-terra-150mco-axial-master-chronometer-summer-blue-38-mm-22010382003004_1.jpg?v=638334344783400000',
         alt: 'Reloj Aqua Terra azul'
     },
     {
@@ -13,7 +13,7 @@ const productos = [
         nombre: 'Moonphase Elite',
         descripcion: 'Manual · Oro 18 qt · Ed. limitada',
         precio: 18500,
-        imagen: 'https://www.chronos.com.mx/wp-content/uploads/2021/04/03.3100.692.03.C923-p-1-510x636.jpg',
+        imagen: 'https://i.ebayimg.com/images/g/720AAOSwwW1l2LYV/s-l1200.jpg',
         alt: 'Reloj Moonphase oro fase lunar'
     },
     {
